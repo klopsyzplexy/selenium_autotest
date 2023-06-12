@@ -7,13 +7,15 @@ public class Main {
 
         Thread.sleep(1000);
         f.login("admin", "admin123");
-        Thread.sleep(2000);
+
         f.hide_menu();
         f.show_menu();
         f.change_tab("PIM");
-        Thread.sleep(2000);
-        f.create_user("Roman", "Marian", "Kowalski", "0", false);
-        Thread.sleep(4000);
+
+        f.create_user("Krzyś", "Marian", "Kowalski", "0", true, true);
+        f.logout();
+        f.login("KrzyśKowalski","Marian213769");
+        Thread.sleep(6000);
         f.bye();
     }
 }
